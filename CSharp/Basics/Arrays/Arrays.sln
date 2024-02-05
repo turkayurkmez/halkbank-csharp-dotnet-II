@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{95FCB0C7-B599-4CDE-8A6B-2F10F835B1D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysAndLoops", "ArraysAndLoops\ArraysAndLoops.csproj", "{6A8C2D18-ABF7-432C-8C6F-DA54DF4100DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95FCB0C7-B599-4CDE-8A6B-2F10F835B1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FCB0C7-B599-4CDE-8A6B-2F10F835B1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FCB0C7-B599-4CDE-8A6B-2F10F835B1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FCB0C7-B599-4CDE-8A6B-2F10F835B1D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8C2D18-ABF7-432C-8C6F-DA54DF4100DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8C2D18-ABF7-432C-8C6F-DA54DF4100DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8C2D18-ABF7-432C-8C6F-DA54DF4100DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8C2D18-ABF7-432C-8C6F-DA54DF4100DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3455F249-9C6D-4391-B217-E99788BCF8DA}
+	EndGlobalSection
+EndGlobal
