@@ -7,6 +7,8 @@ int divide(int a, int b, out int modulo)
     return a / b;
 }
 
+
+
 void sample(ref int number)
 {
     number *= 2;
@@ -18,9 +20,36 @@ int average(params int[] numbers)
     return (int)numbers.Average();
 }
 
+Tuple<int, int> divideAndTuple(int a, int b)
+{
+    var tuple = Tuple.Create(a / b, a % b);
+    return tuple;
+}
+
+DivisionOutput divideAndObject(int a, int b)
+{
+    DivisionOutput output1 = new DivisionOutput
+    {
+        Result = a / b,
+        Modulo = a % b,
+    };
+    return output1;
+
+}
 
 
 
+
+
+var outputOfDivide = divideAndObject(16, 5);
+Console.WriteLine($"sonuç: {outputOfDivide.Result}\t kalan: {outputOfDivide.Modulo}");
+
+(var sonuc, var bolumdenKalan) = divideAndTuple(13, 3);
+Console.WriteLine($"Tuple ile Bölüm sonucu: {sonuc} ve kalan: {bolumdenKalan}");
+
+
+string x = string.Empty;
+(x, var y) = ("Selam", 3.14);
 
 
 var avaerageOfHeats = average(6, 4, 9, 12, 8, 5);
