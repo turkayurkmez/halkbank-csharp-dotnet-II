@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Hotel>
+<html>
+<head>
+</head>
+<body>
+    <h3>Burası, Anasayfa/Giris</h3>
+    <p>Hoşgeldin @ViewBag.Name  </p>
+
+    @if (ViewBag.Date.Day % 2 == 0)
+    {
+        <p style="color:black">Bugünün tarihi @ViewBag.Date.ToLongDateString()</p>
+    }
+    else
+    {
+        <p style="color:red">Bugünün tarihi @ViewBag.Date.ToLongDateString()</p>
+
+    }
+
+    <ul>
+        @foreach (var hotel in Model)
+        {
+            <li>@hotel.Name - @hotel.Location (@hotel.Features)</li>
+        }
+
+    </ul>
+
+   Yeni otelimize ücretsiz davetlisiniz. Katılmak için <a asp-action="DaveteYanit" asp-controller="AnaSayfa">tıklayın</a>
+</body>
+</html>
