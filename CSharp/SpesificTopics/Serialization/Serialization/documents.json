@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "2024 B\u00FCt\u00E7e raporu",
+    "Path": "C:\\Documents",
+    "Extensions": "xslx",
+    "CreationDetails": {
+      "CreatedDate": "2023-12-01T00:00:00",
+      "Owner": "necati",
+      "ApprovedBy": "m\u00FCd\u00FCr"
+    }
+  },
+  {
+    "Name": "2023 \u00C7al\u0131\u015Fan Performans Raporu ",
+    "Path": "C:\\Documents",
+    "Extensions": "xslx",
+    "CreationDetails": {
+      "CreatedDate": "2024-01-02T00:00:00",
+      "Owner": "M\u00FCge",
+      "ApprovedBy": "ik"
+    }
+  },
+  {
+    "Name": "2023 Sat\u0131n alma raporu",
+    "Path": "C:\\Documents",
+    "Extensions": "xslx",
+    "CreationDetails": {
+      "CreatedDate": "2023-12-28T00:00:00",
+      "Owner": "Alperen",
+      "ApprovedBy": "Sat\u0131n alma dep."
+    }
+  }
+]
