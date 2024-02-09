@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion", "DependencyInversion\DependencyInversion.csproj", "{E9D1C8F1-4FEB-4C5C-B9B4-4ED9D670D953}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9D1C8F1-4FEB-4C5C-B9B4-4ED9D670D953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9D1C8F1-4FEB-4C5C-B9B4-4ED9D670D953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9D1C8F1-4FEB-4C5C-B9B4-4ED9D670D953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9D1C8F1-4FEB-4C5C-B9B4-4ED9D670D953}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB4A42EA-C078-4C60-A1F0-232241C979DD}
+	EndGlobalSection
+EndGlobal
