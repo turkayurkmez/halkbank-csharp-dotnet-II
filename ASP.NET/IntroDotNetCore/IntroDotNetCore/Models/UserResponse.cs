@@ -7,7 +7,7 @@ namespace IntroDotNetCore.Models
         [Required(ErrorMessage = "Lütfen adınızı giriniz")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Lütfen Epostanızı giriniz")]
-
+        [EmailAddress(ErrorMessage = "Hatalı eposta formatı!")]
         public string Email { get; set; }
         [Required(ErrorMessage = "Lütfen seçiminizi yapın")]
 

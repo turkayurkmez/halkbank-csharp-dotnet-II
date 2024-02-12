@@ -1,31 +1,22 @@
 ﻿@model UserResponse
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>DaveteYanit</title>
-</head>
-<body>
     <div>
         <form asp-action="DaveteYanit" method="post">
-            <input  placeholder="Adınız" asp-for="Name" /><br />
+            <input placeholder="Adınız" asp-for="Name" class="form-control" /><br />
             <span asp-validation-for="Name"></span><br />
-            <input  placeholder="Eposta" asp-for="Email" /><br />
+            <input placeholder="Eposta" asp-for="Email" class="form-control" /><br />
             <span asp-validation-for="Email"></span><br />
 
-            <select asp-for="IsParticipate">
+            <select asp-for="IsParticipate" class="form-control">
                 <option value="True">Evet</option>
                 <option value="False">Hayır</option>
-
             </select><br />
             <span asp-validation-for="IsParticipate"></span><br />
 
-            <button type="submit">Gönder</button>
+            <button type="submit" class="btn btn-primary">Gönder</button>
 
 
         </form>
     </div>
-</body>
-</html>
+

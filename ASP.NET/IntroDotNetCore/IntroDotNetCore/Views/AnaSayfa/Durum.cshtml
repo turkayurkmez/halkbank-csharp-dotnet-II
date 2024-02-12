@@ -1,0 +1,25 @@
+﻿@model UserResponseViewModel
+
+
+
+@if (Model.UserResponse.IsParticipate)
+{
+    <p>Gelmene çok sevindik @Model.UserResponse.Name orada görüşürüz.</p>
+}
+else
+{
+    <p>Buna üzüldük :/ Bir dahaki sefere görüşürüz!</p>
+
+    @if (Model.Participants.Count > 0)
+    {
+        <p>Bu arada gelecekler listesi şöyle:</p>
+        <ul>
+            @foreach (var item in Model.Participants)
+            {
+                <li>@item.Name</li>
+            }
+        </ul>
+    }
+
+}
+

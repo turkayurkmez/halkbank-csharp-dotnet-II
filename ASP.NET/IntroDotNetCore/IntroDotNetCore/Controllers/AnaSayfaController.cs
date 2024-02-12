@@ -1,4 +1,5 @@
 ﻿using IntroDotNetCore.Models;
+using IntroDotNetCore.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IntroDotNetCore.Controllers
@@ -31,7 +32,19 @@ namespace IntroDotNetCore.Controllers
         {
             if (ModelState.IsValid)
             {
-                return Redirect("/");
+                if (userResponse.IsParticipate)
+                {
+                    UserService.AddUserResponse(userResponse);
+                }
+
+                var viewModel = new UserResponseViewModel
+                {
+                    UserResponse = userResponse,
+                    Participants = UserService.GetUserResponses()
+                };
+
+
+                return View("Durum", viewModel);
             }
 
             return View();

@@ -9,6 +9,9 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+//app.UseHttpLogging();
+app.UseStaticFiles();
+
 app.MapControllerRoute("default", pattern: "{controller=AnaSayfa}/{action=Giris}/{id?}");
 
 
