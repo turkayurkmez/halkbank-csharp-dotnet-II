@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Home Page";
+    var counter = 0;
+    var linkClass = string.Empty;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="row m-2">
+    @foreach (var product in Model)
+    {
+        @if (counter!= 0 && counter % 4 == 0)
+        {
+            @:</div>
+            @:<div class="row m-2">
+        }
+        <div class="col-3">
+           <partial name="_ProductSummary" model="@product"/>
+        </div>
+        counter++;
+    }
+</div>
+
+
+  <ul class="pagination pagination-lg">
+      @for (int i = 1; i <= ViewBag.TotalPages; i++)
+    {
+        linkClass = i == ViewBag.CurrentPage ? "active" : string.Empty;
+        
+        <li class="page-item @linkClass">
+             <a class="page-link" asp-action="Index" asp-controller="Home" asp-route-categoryId="@ViewBag.CurrentCategory" asp-route-page="@i">@i</a>
+         </li>
+    }
+    
+  </ul>
+
