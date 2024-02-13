@@ -6,5 +6,7 @@ namespace eshop.Services
     public interface IProductService
     {
         IEnumerable<ProductSummaryResponse> GetProducts(int categoryId = 0);
+
+        Task<ProductForAddToCardResponse> GetProductAsync(int id);
     }
 }

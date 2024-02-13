@@ -14,6 +14,19 @@ namespace eshop.Services
             this.productRepository = productRepository;
         }
 
+        public Task<ProductForAddToCardResponse> GetProductAsync(int id)
+        {
+            var product = productRepository.GetById(id);
+            var dto = new ProductForAddToCardResponse()
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+            };
+            return Task.FromResult(dto);
+
+        }
+
         public IEnumerable<ProductSummaryResponse> GetProducts(int categoryId = 0)
         {
 

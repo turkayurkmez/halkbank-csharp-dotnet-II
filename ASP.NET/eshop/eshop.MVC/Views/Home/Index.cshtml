@@ -37,3 +37,26 @@
     
   </ul>
 
+@section Scripts{
+     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.basket').on('click', function () {
+                let id = $(this).data('id');
+                $.ajax({
+                    url: '/Shopping/AddToCard/'+id,
+                    type: 'GET',
+                    success: function (data) {
+                        console.log(data);
+                        alert(data.message);
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+
+            });
+        });
+    </script>
+}

@@ -38,7 +38,7 @@ namespace eshop.DataAccess.Repositories
 
         public Product GetById(int id)
         {
-            throw new NotImplementedException();
+            return _products.SingleOrDefault(p => p.Id == id);
         }
 
         public IEnumerable<Product> GetProductsByCategoryId(int id) => _products.Where(p => p.CategoryId == id);
