@@ -21,18 +21,14 @@ namespace eshop.MVC.Controllers
         {
 
             var products = productService.GetProducts(categoryId);
-
-
-
-
             /*
-         * 103 ürününüz var.
-         * Her sayfada 10 ürün göstereceksem
-         * Kaç sayfam olmalı?
-         * 
-         * 103/10 = 10.3 -> 11
-         * 
-         */
+* 103 ürününüz var.
+* Her sayfada 10 ürün göstereceksem
+* Kaç sayfam olmalı?
+* 
+* 103/10 = 10.3 -> 11
+* 
+*/
             var productsCount = products.Count();
             var productPerPage = 4;
 

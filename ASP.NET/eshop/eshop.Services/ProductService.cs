@@ -1,5 +1,6 @@
 ﻿using eshop.DataAccess.Repositories;
 using eshop.Entities;
+using eshop.Services.DataTransferObjects.Response;
 
 namespace eshop.Services
 {
@@ -13,11 +14,24 @@ namespace eshop.Services
             this.productRepository = productRepository;
         }
 
-        public IEnumerable<Product> GetProducts(int categoryId = 0)
+        public IEnumerable<ProductSummaryResponse> GetProducts(int categoryId = 0)
         {
 
-            return categoryId == 0 ? productRepository.GetAll() :
-                                     productRepository.GetProductsByCategoryId(categoryId);
+            var products = categoryId == 0 ? productRepository.GetAll() :
+                            productRepository.GetProductsByCategoryId(categoryId);
+
+            var summaryResponses = products.Select(p => new ProductSummaryResponse
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                Price = p.Price,
+                ImageUrl = p.ImageUrl,
+                CategoryId = categoryId
+            });
+
+
+            return summaryResponses;
         }
     }
 }

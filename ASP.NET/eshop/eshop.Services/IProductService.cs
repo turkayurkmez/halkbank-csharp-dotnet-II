@@ -1,9 +1,10 @@
 ﻿using eshop.Entities;
+using eshop.Services.DataTransferObjects.Response;
 
 namespace eshop.Services
 {
     public interface IProductService
     {
-        IEnumerable<Product> GetProducts(int categoryId = 0);
+        IEnumerable<ProductSummaryResponse> GetProducts(int categoryId = 0);
     }
 }

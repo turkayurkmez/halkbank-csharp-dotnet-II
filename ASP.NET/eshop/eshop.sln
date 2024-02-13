@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.Services", "eshop.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.MVC", "eshop.MVC\eshop.MVC.csproj", "{976023FD-B585-4798-9867-07444B1C144F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.Services.DataTransferObjects", "eshop.Services.DataTransferObjects\eshop.Services.DataTransferObjects.csproj", "{298CF120-2E4F-49CE-88CC-D1640741BF93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{976023FD-B585-4798-9867-07444B1C144F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{976023FD-B585-4798-9867-07444B1C144F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{976023FD-B585-4798-9867-07444B1C144F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298CF120-2E4F-49CE-88CC-D1640741BF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298CF120-2E4F-49CE-88CC-D1640741BF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298CF120-2E4F-49CE-88CC-D1640741BF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298CF120-2E4F-49CE-88CC-D1640741BF93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{C6243DFA-3E19-4311-84F2-98A5F636FA26} = {2B73976C-1323-42ED-B69B-46B991EBCA06}
 		{ECBEA8DD-CD1D-4C75-860D-1B74DCC2584F} = {93CB2C4F-C9AC-452B-88B5-05CF8DA4682D}
 		{976023FD-B585-4798-9867-07444B1C144F} = {8F4CA94A-D646-4EBA-931C-92E7E8603EB5}
+		{298CF120-2E4F-49CE-88CC-D1640741BF93} = {93CB2C4F-C9AC-452B-88B5-05CF8DA4682D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A1A3BB7-795F-4473-A9A2-4D47F53B191A}
