@@ -1,5 +1,7 @@
+using eshop.DataAccess.DataContext;
 using eshop.DataAccess.Repositories;
 using eshop.Services;
+using Microsoft.EntityFrameworkCore;
 
 //IIS ya da appsettings veya launchsettings
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,11 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICategoryRepository, FakeCategoryRepository>();
 
 
+builder.Services.AddSession(option => option.IdleTimeout = TimeSpan.FromMinutes(5));
+
+var connectionString = builder.Configuration.GetConnectionString("db");
+
+builder.Services.AddDbContext<EshopDbContext>(option => option.UseSqlServer(connectionString));
 
 
 var app = builder.Build();
@@ -30,6 +37,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

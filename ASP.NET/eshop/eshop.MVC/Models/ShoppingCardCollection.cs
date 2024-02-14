@@ -10,7 +10,7 @@ namespace eshop.MVC.Models
     }
     public class ShoppingCardCollection
     {
-        public List<CardItem> CardItems { get; set; }
+        public List<CardItem> CardItems { get; set; } = new List<CardItem>();
 
         public void Add(CardItem item)
         {
@@ -28,6 +28,9 @@ namespace eshop.MVC.Models
         public decimal GetTotalPrice() => CardItems.Sum(p => p.Product.Price * p.Quantity);
         public int GetTotalQuantity() => CardItems.Sum(p => p.Quantity);
 
+        public void Clear() => CardItems.Clear();
+
+        public void Remove(int id) => CardItems.RemoveAll(p => p.Product.Id == id);
 
     }
 
