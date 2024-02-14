@@ -13,5 +13,11 @@ namespace eshop.DataAccess.Repositories
         IEnumerable<Product> Search(decimal minPrice, decimal maxPrice);
 
         IEnumerable<Product> GetProductsByCategoryId(int id);
+
+        Task<IEnumerable<Product>> SearchAsync(string name);
+        Task<IEnumerable<Product>> SearchAsync(decimal minPrice, decimal maxPrice);
+        Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int id);
+
+
     }
 }

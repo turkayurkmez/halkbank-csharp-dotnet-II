@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\eshop.DataAccess\eshop.DataAccess.csproj" />
     <ProjectReference Include="..\eshop.Services.DataTransferObjects\eshop.Services.DataTransferObjects.csproj" />
   </ItemGroup>

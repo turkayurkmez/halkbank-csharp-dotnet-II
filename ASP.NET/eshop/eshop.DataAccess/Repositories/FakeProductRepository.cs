@@ -26,7 +26,17 @@ namespace eshop.DataAccess.Repositories
             throw new NotImplementedException();
         }
 
+        public Task CreateAsync(Product entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(int id)
         {
             throw new NotImplementedException();
         }
@@ -36,13 +46,27 @@ namespace eshop.DataAccess.Repositories
             return _products;
         }
 
+        public Task<IEnumerable<Product>> GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public Product GetById(int id)
         {
             return _products.SingleOrDefault(p => p.Id == id);
         }
 
+        public Task<Product> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Product> GetProductsByCategoryId(int id) => _products.Where(p => p.CategoryId == id);
 
+        public Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
 
         public IEnumerable<Product> Search(string name)
         {
@@ -54,7 +78,22 @@ namespace eshop.DataAccess.Repositories
             throw new NotImplementedException();
         }
 
+        public Task<IEnumerable<Product>> SearchAsync(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Product>> SearchAsync(decimal minPrice, decimal maxPrice)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Product entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(Product entity)
         {
             throw new NotImplementedException();
         }

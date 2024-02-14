@@ -1,4 +1,6 @@
-﻿using eshop.Entities;
+﻿using eshop.DataAccess.DataContext;
+using eshop.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +9,15 @@ using System.Threading.Tasks;
 
 namespace eshop.DataAccess.Repositories
 {
-    public class FakeCategoryRepository : ICategoryRepository
+    public class EFCategoryRepository : ICategoryRepository
     {
+        private readonly EshopDbContext dbContext;
+
+        public EFCategoryRepository(EshopDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
         public Task CreateAsync(Category entity)
         {
             throw new NotImplementedException();
@@ -21,18 +30,12 @@ namespace eshop.DataAccess.Repositories
 
         public IEnumerable<Category> GetAll()
         {
-            return new List<Category>()
-            {
-                new(){ Id = 1, Name="A Kategorisi"},
-                new(){ Id = 2, Name="B Kategorisi"},
-                new(){ Id = 3, Name="C Kategorisi"},
-
-            };
+            return dbContext.Categories.AsEnumerable();
         }
 
-        public Task<IEnumerable<Category>> GetAllAsync()
+        public async Task<IEnumerable<Category>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await dbContext.Categories.ToListAsync();
         }
 
         public Category GetById(int id)
